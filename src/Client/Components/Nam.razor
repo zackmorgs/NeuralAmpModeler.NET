@@ -1,27 +1,69 @@
-@using Microsoft.AspNetCore.Components.Forms
-@using AntDesign.Icons
+@rendermode InteractiveWebAssembly
 
-<div id="nam_online" class="container mx-auto">
-    <div class="flex flex-row">
-        <div class="p-4">
-            
+@code {
+    public double Input {get; set; } = 0.0;
+    public double Gate {get; set; } = -80.0;
+    public double Bass {get; set; } = 5.0;
+    public double Middle {get; set; } = 5.0;
+    public double Treble {get; set; } = 5.0;
+    public double Output {get; set; } = 0.0;
+    public bool EQisOn {get; set; } = true;
+
+    public bool NormalizeIsOn {get; set; } = false;
+
+
+}
+
+<div class="amp-modeler">
+    <h2 class="title">NEURAL AMP MODELER</h2>
+    <div class="controls">
+        <div class="control">
+            <label>Input</label>
+            <input type="range" min="0" max="10" step="0.1" @bind="Input" class="knob" />
+            <span class="value">@Input dB</span>
+        </div>
+        <div class="control">
+            <label>Gate</label>
+            <input type="range" min="-80" max="0" step="0.1" @bind="Gate" class="knob" />
+            <span class="value">@Gate dB</span>
+        </div>
+        <div class="control">
+            <label>Bass</label>
+            <input type="range" min="0" max="10" step="0.1" @bind="Bass" class="knob" />
+            <span class="value">@Bass</span>
+        </div>
+        <div class="control">
+            <label>Middle</label>
+            <input type="range" min="0" max="10" step="0.1" @bind="Middle" class="knob" />
+            <span class="value">@Middle</span>
+        </div>
+        <div class="control">
+            <label>Treble</label>
+            <input type="range" min="0" max="10" step="0.1" @bind="Treble" class="knob" />
+            <span class="value">@Treble</span>
+        </div>
+        <div class="control">
+            <label>Output</label>
+            <input type="range" min="0" max="10" step="0.1" @bind="Output" class="knob" />
+            <span class="value">@Output dB</span>
         </div>
     </div>
-    <div class="flex flex-col">
-        <div class="p-4">
-            <div class="flex flex-row">
-                <FileOutlined />
-                <label for="nam_profile">IR</label>
-            </div>
-            <InputFile id="nam_profile" accept=".nam" type="file" class="input" />
-        </div>
-
-        <div class="p-4">
-            <div class="flex flex-row">
-                <FileOutlined />
-                <label for="ir">IR</label>
-            </div>
-            <InputFile id="ir" type="file" accept=".wav" class="input" />
-        </div>
+    <div class="switches">
+        <label class="switch">
+            <input type="checkbox" @bind="EQisOn">
+            <span class="slider"></span>
+        </label>
+        <p>EQ</p>
+        <label class="switch">
+            <input type="checkbox" @bind="NormalizeIsOn">
+            <span class="slider"></span>
+        </label>
+        <p>Normalize</p>
+    </div>
+    <div class="file-inputs">
+        <input type="text" value="5150.nam" readonly class="file-input">
+        <button class="clear-button">✕</button>
+        <input type="text" value="Select IR..." readonly class="file-input">
+        <button class="clear-button">✕</button>
     </div>
 </div>

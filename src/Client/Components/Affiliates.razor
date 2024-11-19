@@ -31,12 +31,12 @@ new Affiliate { Name = "Wave Mind", URL = "https://wavemind.net/softwarehttps://
 
 }
 
-<section id="affiliates" >
+<section id="affiliates">
     <div class="container mx-auto">
-        <div class="p-4">
+        <div class="p-4 my-8">
             <h2 class="text-2xl text-center mb-4">Affiliates</h2>
             <hr class="rule" />
-            <ul id="affiliate_list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <ul id="affiliate_list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 @foreach (var affiliate in affiliates)
                 {
                     <li class="affiliate-item">
