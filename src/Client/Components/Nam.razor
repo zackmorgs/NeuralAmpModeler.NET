@@ -1,0 +1,27 @@
+@using Microsoft.AspNetCore.Components.Forms
+@using AntDesign.Icons
+
+<div id="nam_online" class="container mx-auto">
+    <div class="flex flex-row">
+        <div class="p-4">
+            
+        </div>
+    </div>
+    <div class="flex flex-col">
+        <div class="p-4">
+            <div class="flex flex-row">
+                <FileOutlined />
+                <label for="nam_profile">IR</label>
+            </div>
+            <InputFile id="nam_profile" accept=".nam" type="file" class="input" />
+        </div>
+
+        <div class="p-4">
+            <div class="flex flex-row">
+                <FileOutlined />
+                <label for="ir">IR</label>
+            </div>
+            <InputFile id="ir" type="file" accept=".wav" class="input" />
+        </div>
+    </div>
+</div>

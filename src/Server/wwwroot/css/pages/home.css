@@ -1,0 +1,36 @@
+#cta_list {
+
+}
+#cta_list .btn {
+    display:flex;
+}
+#hero_main_img {
+   
+    margin:1rem -1rem 1rem;
+    padding:1rem 1.5rem ;
+    background: linear-gradient(45deg, #101555, #00e7ffde);
+    box-shadow:0px 0px 1rem rgba(0,0,0,0.5);
+}
+#hero_main_img img{
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.75);
+}
+
+@media (min-width: 768px) {
+    #hero_main_img {
+        padding:1rem 3rem;
+    }
+
+}
+
+
+@media (min-width: 1024px) { 
+
+}
+
+@media (min-width: 1280px) { 
+    
+}
+
+@media (min-width: 1536px) {
+
+}
