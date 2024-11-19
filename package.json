@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "watch" : "npm-run-all -p css:watch dotnet:watch",
-    "build" : "dotnet build",
+    "build" : "npm-run-all -s css:build css:minify dotnet:publish",
     "css:build": "npx tailwindcss -i ./src/Server/wwwroot/css/src.css -o ./src/Server/wwwroot/css/dist.css",
     "css:watch": "npx tailwindcss -i ./src/Server/wwwroot/css/src.css -o ./src/Server/wwwroot/css/dist.css --watch",
     "css:minify" : "lightningcss --minify --bundle --targets \">= 0.25%\" ./src/Server/wwwroot/css/dist.css -o ./src/Server/wwwroot/css/dist.css --sourcemap",

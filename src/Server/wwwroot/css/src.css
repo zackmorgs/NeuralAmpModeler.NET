@@ -96,6 +96,7 @@ body {
 #hero_container {
     background:linear-gradient(45deg, #1e1f23, #1b1c1e);
     background:linear-gradient(45deg, #141414, #111111);
+    
 }
 .hero {
     @apply container;
@@ -132,10 +133,12 @@ body {
     @apply justify-center;
     text-align:center;
     /* background: linear-gradient(45deg, #111111, #0f0e0e, #000000, #131313); */
-    background: rgba(0,0,0,0.5);
+    background:#0d0e0f;
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.3333);
     /* text-shadow: 0px 0px 0.5rem #ffffff75; */
     /* border:1px solid #f1f1f1; */
+
+    transition:all ease-in 0.3s;
 }
 .btn .icon + span {
     margin-left:0.25rem;
@@ -152,6 +155,22 @@ body {
     background:linear-gradient(45deg, #2a2767, #1627a1, #2461d5, #251bb1);
     /* box-shadow:inset 0px 0px 0.25rem rgb(0, 0, 0); */
     /* border:3px solid rgba(255,255,255,0.25); */
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+    transition:transform 0.3s ease-in-out;
+}
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-tertiary:hover {
+    transform:scale(1.05);
+}
+.btn-primary:active,
+.btn-secondary:active,
+.btn-tertiary:active{
+    transform:scale(1.0);
 }
 .btn-secondary {
     border:none;
@@ -172,9 +191,10 @@ body {
 }
 
 .rule {
-    max-width: 25%;
+    max-width: 8%;
     @apply mx-auto;
-    border-bottom: 2px solid white;
+    border:0;
+    border-bottom: 3px solid #295a6dfa;
 }
 
 .accordion-header {
@@ -223,6 +243,7 @@ body {
 }
 #affiliates {
     background: #00000042;
+    box-shadow: inset 0px 0px 1rem rgb(0 0 0 / 28%);    
 }
 #affiliates-list {
 
@@ -239,7 +260,8 @@ body {
 .affiliate-img {
     @apply mx-auto;
     @apply my-6;
-    max-width:12rem;
+    max-width:8rem;
+
 }
 
 #affiliates h2,
@@ -294,6 +316,10 @@ body {
         margin-bottom:0.75rem;
         @apply mx-auto;
     } 
+    .affiliate-img {
+        max-width: 8rem;
+    }
+    
 }
 
 
@@ -309,6 +335,9 @@ body {
     .nav-item:hover {
         border-bottom:1px solid #41819d61;
         text-shadow:0px 0px 1rem rgba(225,225,255,0.75);
+    }
+    .affiliate-img {
+        max-width: 10rem;
     }
 }
 

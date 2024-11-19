@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Server.Data
 {
@@ -6,5 +7,5 @@ namespace Server.Data
     public class ApplicationUser : IdentityUser
     {
     }
-
+    
 }
