@@ -10,7 +10,7 @@
     public bool isLoaded = false;
     protected override void OnInitialized()
     {
-        
+
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -77,6 +77,11 @@
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink activeClass="active" @onclick="@ToggleMenu" href="/models" class="nav-item">
+                        Models
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink activeClass="active" @onclick="@ToggleMenu" href="/create" class="nav-item">
                         Create
                     </NavLink>
@@ -86,11 +91,7 @@
                         Contribute
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink activeClass="active" @onclick="@ToggleMenu" href="/models" class="nav-item">
-                        Models
-                    </NavLink>
-                </li>
+
                 <li>
                     <NavLink activeClass="active" @onclick="@ToggleMenu" href="/blog" class="nav-item">
                         Blog

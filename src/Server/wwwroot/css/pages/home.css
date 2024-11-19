@@ -1,7 +1,7 @@
 #cta_list {
 
 }
-#cta_list .btn {
+#code_list .btn {
     display:flex;
 }
 #hero_main_img {
@@ -14,6 +14,8 @@
 #hero_main_img img{
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.75);
 }
+
+
 
 @media (min-width: 768px) {
     #hero_main_img {
