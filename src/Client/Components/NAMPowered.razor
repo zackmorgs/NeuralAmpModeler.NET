@@ -1,0 +1,51 @@
+@code {
+    public class NAMApp
+    {
+        public string Name { get; set; }
+        public string URL { get; set; }
+        public string Image { get; set; }
+    }
+
+    private List<NAMApp> affiliates = new List<NAMApp>();
+
+    protected override void OnInitialized()
+    {
+        affiliates = new List<NAMApp>
+{
+new NAMApp { Name = "Audio Assault", URL = "https://www.audio-assault.com", Image =
+"img/affiliates/audio-assault.webp" },
+new NAMApp { Name = "Dime Head", URL = "https://dimehead.de/", Image = "img/affiliates/dime-head.webp" },
+new NAMApp { Name = "Mod.Audio", URL = "https://mod.audio/", Image = "img/affiliates/dwarf-mod.webp" },
+new NAMApp { Name = "Gigfast", URL = "https://mod.audio/", Image = "img/affiliates/gigfast.webp" },
+new NAMApp { Name = "Melda", URL = "https://www.meldaproduction.com/", Image = "img/affiliates/melda.webp" },
+new NAMApp { Name = "Poly Effects", URL = "https://www.polyeffects.com/", Image = "img/affiliates/poly.webp" },
+new NAMApp { Name = "Solemn Tones", URL = "https://solemntones.com/", Image = "img/affiliates/solemn-tones.webp" },
+new NAMApp { Name = "ToneHunt.org", URL = "https://tonehunt.org/", Image = "img/affiliates/tone-hunt.webp" },
+new NAMApp { Name = "Two Notes", URL = "https://www.two-notes.com/en/genome/", Image =
+"img/affiliates/two-notes.webp" },
+new NAMApp { Name = "Urgitone", URL = "https://ugritone.com/", Image = "img/affiliates/urgitone.webp" },
+new NAMApp { Name = "Wave Mind", URL = "https://wavemind.net/softwarehttps://ugritone.com/", Image =
+"img/affiliates/wavemind.webp" }
+};
+    }
+
+}
+
+<section id="affiliates">
+    <div class="container mx-auto">
+        <div class="py-8 px-4">
+            <h2 class="text-2xl text-center mb-4">NAM-Powered</h2>
+            <hr class="rule" />
+            <ul id="affiliate_list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 p-4">
+                @foreach (var affiliate in affiliates)
+                {
+                    <li class="affiliate-item">
+                        <a class="affiliate" href="@affiliate.URL" target="_blank" rel="noopener noreferrer">
+                            <img class="affiliate-img" src="@affiliate.Image" alt="@affiliate.Name" />
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</section>
