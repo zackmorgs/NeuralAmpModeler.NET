@@ -21,10 +21,16 @@ body {
 }
 #main {
     @apply relative;
-    top:59px;
+    top: 64px;
     right:0;
     bottom:0;
     left:0;
+}
+
+p {
+    max-width:45ch;
+    text-align:center;
+    margin:0 auto;
 }
 #nav_menu {
     border-bottom:#5e89d92e 1px solid;
@@ -157,19 +163,13 @@ body {
     /* border:3px solid rgba(255,255,255,0.25); */
 }
 
-.btn-primary,
-.btn-secondary,
-.btn-tertiary {
+.btn {
     transition:transform 0.3s ease-in-out;
 }
-.btn-primary:hover,
-.btn-secondary:hover,
-.btn-tertiary:hover {
+.btn:hover {
     transform:scale(1.05);
 }
-.btn-primary:active,
-.btn-secondary:active,
-.btn-tertiary:active{
+.btn:active {
     transform:scale(1.0);
 }
 .btn-secondary {
@@ -264,11 +264,16 @@ body {
 
 }
 
-#affiliates h2,
-#footer h3,
-#code h3 {
+h1,
+h2,
+h3 {
     font-family:"Michroma", serif;
     text-align:center;
+}
+
+.icon {
+    height: 1rem;
+    width: auto;
 }
 
 #footer .text-sm {
@@ -288,9 +293,9 @@ body {
 
 
 @media (min-width: 768px) {
-    /* #hero_container {
-        background:url("/img/nam-5150.webp") fixed;
-    } */
+    #main {
+        top:58px;
+    }
     #nav_menu {
         background:linear-gradient(45deg, #1b1c2080, #1b1c1e8c);
     }
@@ -312,10 +317,11 @@ body {
     }
     .hero p {
         font-size:1.5rem;
-        max-width:45ch;
+
         margin-bottom:0.75rem;
         @apply mx-auto;
     } 
+
     .affiliate-img {
         max-width: 8rem;
     }

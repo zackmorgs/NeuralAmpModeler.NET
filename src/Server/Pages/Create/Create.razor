@@ -1,0 +1,33 @@
+@using AntDesign.Icons;
+@using Client.Components
+@page "/create"
+
+
+<link rel="stylesheet" href="/css/pages/create.css" />
+
+<section id="create_hero_container">
+    <div class="hero-bg">
+        <div id="hero_create" class="hero">
+            <div class="text-center z-10">
+                <h2 class="text-3xl mb-4">Create</h2>
+                <hr class="rule" />
+                <p class="mt-4">
+                    If you're looking To create NAM models of your favorite gear, this is the place.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="computer_distributions">
+    <div class="container mx-auto">
+        <h2 class="text-2xl mx-auto">
+            Local
+        </h2>
+        <hr class="rule my-4" />
+        <div id="dist_panel" class="grid grid-cols-1 md:grid-cols-2">
+            <WindowsBased />
+            <MacBased />
+        </div>
+    </div>
+</section>
+<BrowserBased />
