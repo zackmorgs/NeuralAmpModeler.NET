@@ -9,7 +9,8 @@
     "css:watch": "npx tailwindcss -i ./src/Server/wwwroot/css/src.css -o ./src/Server/wwwroot/css/dist.css --watch",
     "css:minify" : "lightningcss --minify --bundle --targets \">= 0.25%\" ./src/Server/wwwroot/css/dist.css -o ./src/Server/wwwroot/css/dist.css --sourcemap",
     "dotnet:publish" : "dotnet publish ./src/Server -c Release",
-    "dotnet:watch" : "dotnet watch --project ./src/Server/Server.csproj"
+    "dotnet:watch" : "dotnet watch --project ./src/Server/Server.csproj",
+    "dotnet:run" : "dotnet run --project ./src/Server/Server.csproj"
   },
   "keywords": [],
   "author": "",

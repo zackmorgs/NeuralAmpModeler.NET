@@ -2,3 +2,8 @@
     background:#0e0e0e;
     margin-bottom:1rem;
 }
+
+
+#hero-content {
+    background:src('/img/zackmorgs-live.jpg') no-repeat center center;
+}

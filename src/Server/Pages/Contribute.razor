@@ -1,6 +1,9 @@
-@page "/contribute"
+@using Client.Components
 
-<section>
+@page "/contribute"
+<link rel="stylesheet" href="/css/pages/contribute.css" />
+
+<section id="contribute_hero">
     <div class="hero">
         <div class="text-center z-10">
             <h2 class="text-3xl mb-4">Contribute</h2>
@@ -12,10 +15,10 @@
 </section>
 <section>
     <div class="container mx-auto">
-        <div class="panel p-4">
-            <p>NAM is an open-source project under continuous development. If you're excited about NAM and eager to
-                support it, getting involved as a developer is the best way to do it! </p>
-
+        <div class="panel p-4 text-center">
+            <p>NAM is an <b>open-source</b> project under <b>continuous development</b>.</p>
+            <p class="mt-4">If you're excited about NAM and eager to support it, getting involved as a developer is the best way to do it! </p>
         </div>
     </div>
 </section>
+<Repos/>
