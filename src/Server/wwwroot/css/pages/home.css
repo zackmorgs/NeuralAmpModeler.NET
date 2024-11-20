@@ -54,12 +54,16 @@
     height:100%;
     width: 100%;
 }
-
+.affiliate-img {
+    transition:transform 0.5s;
+}
 @media (min-width: 768px) {
     #hero_main_img {
         padding:1rem 3rem;
     }
-
+    .affiliate-img:hover {
+        transform:scale(1.1);
+    }
 }
 
 

@@ -1,5 +1,5 @@
 // on document onload
-document.addEventListener('DOMContentLoaded', () => {
+let run_matrix = () => {
     console.log("loaded");
     // var canvas = document.body.appendChild(document.createElement('canvas')),
     //     context = canvas.getContext('2d');
@@ -37,11 +37,14 @@ document.addEventListener('DOMContentLoaded', () => {
         'w',
         'x',
         'y',
-
         'z'
     ];
 
-    var stripCount = 60, stripX = new Array(), stripY = new Array(), dY = new Array(), stripFontSize = new Array();
+    let stripCount = 60
+    let stripX = new Array()
+    let stripY = new Array()
+    let dY = new Array()
+    let stripFontSize = new Array();
 
     for (var i = 0; i < stripCount; i++) {
         stripX[i] = Math.floor(Math.random() * 1265);
@@ -103,4 +106,4 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(draw, 70);
     }
 
-});
+};
