@@ -78,10 +78,12 @@ p {
         overflow: hidden;
     }
     #dist_panel {
-        border-radius:1rem;
         overflow:hidden;    
-        background:rgba(0,0,0,0.25);
-        padding:1rem;
+        /* padding:1rem; */
         margin:1rem auto;
     }
+/*    #dist_panel section {
+        border-radius:1rem;        
+        background:rgba(0,0,0,0.25);
+    }*/
 }

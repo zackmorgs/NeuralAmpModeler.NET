@@ -1,21 +1,113 @@
 @using Microsoft.AspNetCore.Components.Web
+@using AntDesign.Icons
 
 @page "/play"
 
-<link rel="stylesheet" href="/css/pages/play.css" />
 
-<section id="play_hero">
-    <div class="hero">
-        <div class="hero-content text-center z-10">
-            <h2 class="text-3xl mb-4">Play</h2>
+@* <section id="play_hero">
+    <div class="hero ">
+        <h2 class="text-3xl mb-4">Play</h2>
+        <hr class="rule my-4" />
+        <div class="hero-content relative z-10">
+            <div class="hero-bg">
+                <div class="gradient"></div>
+                <img id="hero_play_img" src="/img/zackmorgs-live-ai-color.png" />
+            </div>
             <p>
-                Here you'll find everything you need to get into NAM, from making your own models to getting connected
-                with tens of thousands of other musicians enjoying NAM.
             </p>
-            <a href="/get-started"
-                class="btn btn-primary">
-                Download
-            </a>
+        </div>
+        <a href="/get-started" class="btn btn-primary ">
+        <span> Download</span>
+        </a> 
+    </div>
+</section>  *@
+<section>
+    <div class="container mx-auto mt-4">
+        <h1 class="text-2xl text-center">Play</h1>
+        <hr class="rule my-4" />
+        <p class="md:text-lg">Get started playing through NAM now.</p>
+    </div>
+</section>
+<section>
+    <div class="container mx-auto">
+        <div class="panel m-4">
+            <h3 class="text-xl text-center mb-4">
+                Video Tutorial
+            </h3>
+            <hr class="rule" />
+            <iframe class="my-4 aspect-video w-full mx-auto" src="https://www.youtube.com/embed/fCa_OvSByhU?si=pJbkp7eNf6Wla-xS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
 </section>
+<section id="how_to_play">
+    <h1 class="text-xl text-center mt-4">VST3 Instructions</h1>
+    <hr class="rule mt-4" />
+    
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 ">
+            <div class="p-4 text-center">
+                <div class="panel h-full">
+                    <h3 class="text-lg">1. Download VST3</h3>
+                    <hr class="rule my-4" />
+                    <p>To get started with your NAM journey, download and install the VST3 plugin.</p>
+                    <a href="/download" class="btn btn-secondary my-4">
+                        Download <ArrowRightOutlined />
+                    </a>
+                </div>
+            </div>
+            <div class="p-4 text-center">
+                <div class="panel">
+                    <h3 class="text-lg">2. Download .NAM Profile</h3>
+                    <hr class="rule my-4" />
+                    <p>Head over to <a href="https://tonehunt.org">ToneHunt</a> or our very own <a href="/models">Models</a> page for your desired amp/pedal simulation.</p>
+                
+                    <a class="btn my-4" href="https://tonehunt.org" target="_blank">
+                        <img src="svg/tonehunt.svg" class="icon"/>
+                    </a>
+                    <br/>
+                    <a class="btn mt-4" href="/models" target="_blank">
+                        Models
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #play_hero {
+        background: #0e0e0e;
+        margin-bottom: 1rem;
+    }
+
+    .gradient {
+        background: linear-gradient(45deg, #d37617a3, #00e7ff7d);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        box-shadow: inset 0px 0px 1rem rgb(0 0 0 / 25%);
+    }
+
+
+    .hero-bg {
+        overflow: hidden;
+    @* max-height: 10rem; *@ height: 14rem;
+    }
+
+    .hero-content {
+        border-radius 1rem;
+        overflow: hidden;
+    }
+
+    #hero_play_img {
+        width: 100%;
+        z-index: index 10;
+    }
+
+    .gradient {
+        z-index: 20;
+    }
+
+</style>

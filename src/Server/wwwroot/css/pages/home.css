@@ -26,6 +26,8 @@
 #code {
     position:relative;
     overflow:hidden;
+    background:linear-gradient(0deg, rgba(0,0,0,0.25), transparent, rgba(0,0,0,0.25));
+
     /* border-top:1px solid #ffffff1f;
     border-bottom:1px solid #ffffff1f; */
 }
@@ -42,7 +44,7 @@
     border-radius:1rem;
     background:rgba(0,0,0,0.25);
 } */
-.matrix {
+/* .matrix {
     opacity:0.3333;
     z-index:-1;
     position:absolute;
@@ -53,7 +55,7 @@
     background:linear-gradient(0deg, rgba(0,0,0,0.5), transparent, rgba(0,0,0,0.5));
     height:100%;
     width: 100%;
-}
+} */
 .affiliate-img {
     transition:transform 0.5s;
 }

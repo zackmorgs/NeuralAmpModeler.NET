@@ -620,6 +620,10 @@ video {
   z-index: 10;
 }
 
+.m-4 {
+  margin: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -706,6 +710,10 @@ video {
 
 .h-6 {
   height: 1.5rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-24 {
@@ -982,65 +990,8 @@ body {
   left:0;
 }
 
-.loader {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 6rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-.loader:before,
-.loader:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  animation: pulsOut 1.8s ease-in-out infinite;
-  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
-}
-
-.loader:before {
-  width: 100%;
-  padding-bottom: 100%;
-  box-shadow: inset 0 0 0 1rem #fff;
-  animation-name: pulsIn;
-}
-
-.loader:after {
-  width: calc(100% - 2rem);
-  padding-bottom: calc(100% - 2rem);
-  box-shadow: 0 0 0 0 #fff;
-}
-
-@keyframes
-pulsIn {
-  0% {
-    box-shadow: inset 0 0 0 1rem #fff;
-    opacity: 1;
-  }
-
-  50%,
-    100% {
-    box-shadow: inset 0 0 0 0 #fff;
-    opacity: 0;
-  }
-}
-
-@keyframes
-pulsOut {
-  0%,
-    50% {
-    box-shadow: 0 0 0 0 #fff;
-    opacity: 0;
-  }
-
-  100% {
-    box-shadow: 0 0 0 1rem #fff;
-    opacity: 1;
-  }
+.container {
+  transition:width 0.3s ease-in-out;
 }
 
 p {
@@ -1057,6 +1008,7 @@ p {
      */
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
+  z-index:100;
 }
 
 #nav_bar {
@@ -1102,6 +1054,7 @@ p {
 }
 
 #nav_container {
+  transition:width 0.3s ease-in-out;
   position: relative;
 }
 
@@ -1207,6 +1160,7 @@ p {
 }
 
 .hero {
+  transition:width 0.3s ease-in-out;
   margin-left: auto;
   margin-right: auto;
   padding:2rem 1rem 2rem;
@@ -1400,6 +1354,12 @@ h3 {
   text-align:center;
 }
 
+.panel {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+}
+
 .icon {
   height: 1rem;
   width: auto;
@@ -1569,6 +1529,11 @@ h3 {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
