@@ -7,5 +7,7 @@ namespace Server.Data
     public class NAMDb(DbContextOptions<NAMDb> options) : IdentityDbContext<ApplicationUser>(options)
     {
         public DbSet<NAMFile> NAMFiles { get; set; }
+        public DbSet<NAMModel> NAMModels { get; set; }
+
     }
 }

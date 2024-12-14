@@ -302,7 +302,9 @@ h3 {
     text-decoration: none;
     margin: 5px;
 }
-
+#footer h3 {
+    text-transform:uppercase;
+}
 @media (min-width: 414px) {
 
 }
